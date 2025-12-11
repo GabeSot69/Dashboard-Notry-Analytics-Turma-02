@@ -1,0 +1,22 @@
+<div class="hidden md:block">
+  <div class="layout-sidebar" [ngClass]="{ 'layout-sidebar-hidden': !isOpen }">
+    <div class="h-[32rem] bg-white rounded-md shadow-sm">
+      <p-menu [model]="items" styleClass="!shadow-none !border-none" />
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE -->
+<div class="block md:hidden">
+  <p-drawer
+    [visible]="mobileOpen"
+    position="left"
+    dismissible="false"
+    styleClass="w-64 shadow-md"
+    (visibleChange)="onDrawerChange($event)"
+  >
+    <div class="h-[32rem] bg-white rounded-md">
+      <p-menu [model]="items" styleClass="!shadow-none !border-none" />
+    </div>
+  </p-drawer>
+</div>

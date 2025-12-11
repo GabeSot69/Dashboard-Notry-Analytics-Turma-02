@@ -1,0 +1,27 @@
+<p-toolbar>
+  <ng-template #start>
+    <div class="flex gap-3 items-center p-2">
+      <!-- MENU -->
+      <p-button
+        icon="pi pi-bars"
+        size="large"
+        styleClass="!bg-transparent !border-none !text-[#64748b] !text-3xl"
+        (onClick)="toggleMenu()"/>
+
+      <!-- Logo -->
+        <div class="flex items-center">
+          <i class="pi pi-gauge !text-4xl text-[#10b981] mr-2"></i>
+          <h3 class="text-xl">SAKAI</h3>
+        </div>
+
+    </div>
+  </ng-template>
+
+  <ng-template #end>
+      <p-button icon="pi pi-user" size="large" styleClass="!bg-transparent !border-none !text-[#64748b] !text-3xl" />
+      <p-button icon="pi pi-cog" size="large" styleClass="!bg-transparent !border-none !text-[#64748b] !text-3xl" />
+
+  </ng-template>
+</p-toolbar>
+
+
