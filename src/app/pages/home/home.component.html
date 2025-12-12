@@ -1,0 +1,23 @@
+<div class="layout-wrapper" [class.layout-static-inactive]="!isOpen">
+  <!-- Topbar -->
+  <app-sidebar></app-sidebar>
+
+  <!-- Menu -->
+  <app-menu></app-menu>
+
+  <div class="hidden md:block">
+    <div
+      class="layout-main-container md:layout-main-container transition-all duration-300"
+    >
+      <app-dashboard></app-dashboard>
+   
+    </div>
+  </div>
+
+  <!-- MOBILE -->
+  <div class="block md:hidden">
+    <div class="transition-all duration-300 p-4">
+      <app-dashboard></app-dashboard>
+    </div>
+  </div>
+</div>

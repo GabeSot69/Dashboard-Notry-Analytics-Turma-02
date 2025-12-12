@@ -7,6 +7,7 @@ import { MenuComponent } from './menu/menu.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CommonModule } from '@angular/common';
 import { SidebarService } from './services/sidebar.service';
+import { HomeComponent } from './pages/home/home.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { SidebarService } from './services/sidebar.service';
     CommonModule,
     SidebarComponent,
     MenuComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
