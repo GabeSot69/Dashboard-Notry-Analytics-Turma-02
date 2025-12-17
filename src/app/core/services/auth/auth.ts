@@ -28,19 +28,17 @@ export class Auth {
 
         if (user) {
             if (user.senha !== senha) {
+                this.isAuthenticated.set(false)
                 return false;
             }
 
             this.userAuth.set(user)
 
-            localStorage.setItem(
-                'auth',
-                JSON.stringify(user)
-            )
-
+            localStorage.setItem( 'auth', JSON.stringify(user))
+            this.isAuthenticated.set(true)
             return true;
         }
-
+        this.isAuthenticated.set(false)
         return false;
     }
 }

@@ -48,7 +48,7 @@ export class LoginComponent {
 
       if (result) {
         this.formSubmit.set(false);
-        this.router.navigate([''])
+        this.router.navigate(['home'])
       }
 
       this.email.set("");
