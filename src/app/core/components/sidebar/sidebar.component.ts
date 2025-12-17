@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
-import { NgClass } from "../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
-import { SidebarService } from '../services/sidebar.service';
+import { NgClass } from "../../../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
+import { SidebarService } from '../../../services/sidebar.service';
 
 @Component({
   selector: 'app-sidebar',

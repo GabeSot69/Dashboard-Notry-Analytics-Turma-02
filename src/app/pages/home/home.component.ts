@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { SidebarComponent } from '../../sidebar/sidebar.component';
-import { DashboardComponent } from '../../dashboard/dashboard.component';
-import { MenuComponent } from '../../menu/menu.component';
+import { SidebarComponent } from '../../core/components/sidebar/sidebar.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { MenuComponent } from '../../shared/components/menu/menu.component';
 import { SidebarService } from '../../services/sidebar.service';
 
 @Component({

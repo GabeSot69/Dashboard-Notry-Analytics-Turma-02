@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
 import { DrawerModule } from 'primeng/drawer';
 
-import { SidebarService } from '../services/sidebar.service';
+import { SidebarService } from '../../../services/sidebar.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

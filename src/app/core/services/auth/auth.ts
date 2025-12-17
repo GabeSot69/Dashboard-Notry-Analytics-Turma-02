@@ -1,5 +1,5 @@
 import { Injectable, signal } from "@angular/core";
-import { User } from "../../shared/models/User";
+import { User } from "../../../shared/models/User";
 
 @Injectable({
     providedIn: 'root',
