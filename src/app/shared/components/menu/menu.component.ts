@@ -5,6 +5,7 @@ import { DrawerModule } from 'primeng/drawer';
 
 import { SidebarService } from '../../../services/sidebar.service';
 import { CommonModule } from '@angular/common';
+import { Auth } from '../../../core/services/auth/auth';
 
 @Component({
   selector: 'app-menu',
@@ -17,7 +18,10 @@ export class MenuComponent implements OnInit {
   isOpen = true;
   mobileOpen = false;
 
-  constructor(private sidebarService: SidebarService) {
+  constructor(
+    private sidebarService: SidebarService,
+    private authService: Auth
+  ) {
     this.sidebarService.visible$.subscribe(val => {
       this.isOpen = val;
     });
@@ -47,6 +51,7 @@ export class MenuComponent implements OnInit {
           {
             label: 'Logout',
             icon: 'pi pi-sign-out',
+            command: () => this.authService.logout(),
           },
         ],
       },

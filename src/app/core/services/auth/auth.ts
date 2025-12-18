@@ -1,5 +1,6 @@
-import { Injectable, signal } from "@angular/core";
+import { inject, Injectable, signal } from "@angular/core";
 import { User } from "../../../shared/models/User";
+import { Router } from "@angular/router";
 
 @Injectable({
     providedIn: 'root',
@@ -7,9 +8,11 @@ import { User } from "../../../shared/models/User";
 
 export class Auth {
     private usuarios: User[] = [
-        { email: 'bla1@gmail.com', senha: '123' },
-        { email: 'bla2@gmail.com', senha: '456' },
+        { email: 'adm1@admin.com', senha: '123' },
+        { email: 'adm2@admin.com', senha: '456' },
     ]
+
+    private router = inject(Router)
 
     private getInitialUser(): User | null {
         const userJson = localStorage.getItem('auth');
@@ -40,5 +43,12 @@ export class Auth {
         }
         this.isAuthenticated.set(false)
         return false;
+    }
+
+    logout(): void {
+        this.userAuth.set(null);
+        this.isAuthenticated.set(false);
+        localStorage.removeItem('auth');
+        this.router.navigate(['login']);
     }
 }
