@@ -9,6 +9,18 @@
   </div>
 </div>
 
-<div class="p-5 h-[20rem]" style="border: 1px solid rgb(16, 42, 82)">
-  <p>GRÁFICO 3</p>
+<div class="p-5 h-[20rem] flex flex-col" style="border: 1px solid rgb(16, 42, 82)">
+  <div class="chart-container flex-1 flex">
+    <apx-chart
+      class="w-full"
+      #chart
+      [series]="chartOptions.series!"
+      [chart]="chartOptions.chart!"
+      [xaxis]="chartOptions.xaxis!"
+      [yaxis]="chartOptions.yaxis!"
+      [plotOptions]="chartOptions.plotOptions!"
+      [dataLabels]="chartOptions.dataLabels!"
+      [title]="chartOptions.title!"
+    ></apx-chart>
+  </div>
 </div>
