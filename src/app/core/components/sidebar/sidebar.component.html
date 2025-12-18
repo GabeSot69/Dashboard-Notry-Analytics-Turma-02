@@ -1,27 +1,27 @@
-<p-toolbar>
+<div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 p-2">
+<p-toolbar styleClass="!bg-white/10 !backdrop-blur-lg !border-white/20 !rounded-2xl !px-6 !py-3 !shadow-2xl">
   <ng-template #start>
-    <div class="flex gap-3 items-center p-2">
+    <div class="flex gap-4 items-center">
       <!-- MENU -->
-      <p-button
-        icon="pi pi-bars"
-        size="large"
-        styleClass="!bg-transparent !border-none !text-[#64748b] !text-3xl"
-        (onClick)="toggleMenu()"/>
+      <p-button icon="pi pi-bars" size="large"
+        styleClass="!bg-transparent !border-none !text-indigo-200 hover:!text-white hover:!bg-white/10 !text-2xl transition-all"
+        (onClick)="toggleMenu()" />
 
       <!-- Logo -->
-        <div class="flex items-center">
-          <i class="pi pi-gauge !text-4xl text-[#10b981] mr-2"></i>
-          <h3 class="text-xl">ThermoInsight</h3>
-        </div>
+      <div class="flex items-center ml-2">
+        <i class="pi pi-gauge !text-3xl text-indigo-400 mr-2"></i>
+        <h3 class="text-xl font-bold text-white tracking-tight">ThermoInsight</h3>
+      </div>
 
     </div>
   </ng-template>
 
   <ng-template #end>
-      <p-button icon="pi pi-user" size="large" styleClass="!bg-transparent !border-none !text-[#64748b] !text-3xl" />
-      <p-button icon="pi pi-cog" size="large" styleClass="!bg-transparent !border-none !text-[#64748b] !text-3xl" />
+    <p-button icon="pi pi-user" size="large"
+      styleClass="!bg-transparent !border-none !text-indigo-200 hover:!text-white hover:!bg-white/10 !text-2xl transition-all" />
+    <p-button icon="pi pi-cog" size="large"
+      styleClass="!bg-transparent !border-none !text-indigo-200 hover:!text-white hover:!bg-white/10 !text-2xl transition-al" />
 
   </ng-template>
 </p-toolbar>
-
-
+</div>
