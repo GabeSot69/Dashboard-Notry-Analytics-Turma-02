@@ -49,6 +49,6 @@ export class Auth {
         this.userAuth.set(null);
         this.isAuthenticated.set(false);
         localStorage.removeItem('auth');
-        this.router.navigate(['login']);
+        this.router.navigate(['']);
     }
 }
